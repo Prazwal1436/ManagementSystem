@@ -9,6 +9,8 @@ export default function Header() {
 
 
   return (
+    <div>
+
     <div className=' bg-dark-purple text-black flex justify-between'>
          <i className={` fa-sharp fa-solid fa-bars fa-xl mb-3 p-4 lg:hidden cursor-pointer 
              ${!open && "rotate-180"} `}
@@ -16,12 +18,11 @@ export default function Header() {
         <Link to="/"><h1 className="text-2xl font-semibold text-gray-400 m-2 mx-6 p-2">Tech Revo Nepal</h1></Link>
 
        <div className='flex p-2 m-2 mx-3 text-gray-400'>
-       <div class="dropdown ">
+       <div className="dropdown ">
       <button
-        class="
+        className="
           dropdown-toggle
           px-3
-          py-4
           font-medium
           text-xs
           leading-tight
@@ -38,10 +39,10 @@ export default function Header() {
         data-bs-toggle="dropdown"
         aria-expanded="false"
       >
-       <i class="fa-solid fa-xl  fa-bell"></i>
+       <i class='bx bx-bell bx-sm'></i>
       </button>
       <ul
-        class="
+        className="
           dropdown-menu
           min-w-max
           absolute
@@ -64,7 +65,7 @@ export default function Header() {
       >
         <li>
           <a
-            class="
+            className="
               dropdown-item
               text-sm
               py-2
@@ -83,7 +84,7 @@ export default function Header() {
         </li>
         <li>
           <a
-            class="
+            className="
               dropdown-item
               text-sm
               py-2
@@ -102,7 +103,7 @@ export default function Header() {
         </li>
         <li>
           <a
-            class="
+            className="
               dropdown-item
               text-sm
               py-2
@@ -122,12 +123,11 @@ export default function Header() {
       </ul>
     </div>
 
-    <div class="dropdown ">
+    <div className="dropdown ">
       <button
-        class="
+        className="
           dropdown-toggle
           px-3
-          py-4
           font-medium
           text-xs
           leading-tight
@@ -144,10 +144,10 @@ export default function Header() {
         data-bs-toggle="dropdown"
         aria-expanded="false"
       >
-        <i class="fa-solid fa-xl fa-bullhorn"></i>
+        <i class='bx bxs-megaphone bx-sm'></i>
       </button>
       <ul
-        class="
+        className="
           dropdown-menu
           min-w-max
           absolute
@@ -170,7 +170,7 @@ export default function Header() {
       >
         <li>
           <a
-            class="
+            className="
               dropdown-item
               text-sm
               py-2
@@ -189,7 +189,7 @@ export default function Header() {
         </li>
         <li>
           <a
-            class="
+            className="
               dropdown-item
               text-sm
               py-2
@@ -208,7 +208,7 @@ export default function Header() {
         </li>
         <li>
           <a
-            class="
+            className="
               dropdown-item
               text-sm
               py-2
@@ -228,12 +228,12 @@ export default function Header() {
       </ul>
     </div>
 
-    <div class="dropdown ">
+    <div className="dropdown ">
       <button
-        class="
+        className="
           dropdown-toggle
           px-3
-          py-4
+          
           font-medium
           text-xs
           leading-tight
@@ -250,10 +250,10 @@ export default function Header() {
         data-bs-toggle="dropdown"
         aria-expanded="false"
       >
-       <i class="fa-solid fa-xl  fa-user"></i>
+        <i class='bx bx-user bx-sm'></i>
       </button>
       <ul
-        class="
+        className="
           dropdown-menu
           min-w-max
           absolute
@@ -276,7 +276,7 @@ export default function Header() {
       >
         <li>
           <a
-            class="
+            className="
               dropdown-item
               text-sm
               py-2
@@ -288,14 +288,14 @@ export default function Header() {
               bg-transparent
               text-gray-700
               hover:bg-gray-100
-            "
+              "
             href="#"
             >Action</a
           >
         </li>
         <li>
           <a
-            class="
+            className="
               dropdown-item
               text-sm
               py-2
@@ -314,8 +314,8 @@ export default function Header() {
         </li>
         <li>
           <a
-            class="
-              dropdown-item
+            className="
+            dropdown-item
               text-sm
               py-2
               px-4
@@ -328,13 +328,15 @@ export default function Header() {
               hover:bg-gray-100
             "
             href="#"
-            >Something else here</a
-          >
+            >Something else here
+            </a>
         </li>
       </ul>
     </div>
     
        </div>
     </div>
+
+              </div>
   )
 }

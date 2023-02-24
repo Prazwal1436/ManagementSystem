@@ -1,17 +1,18 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux'
-import { setOpen,setInventory,setPatient,setScheduling,setImaging,setMedication,setAdmin } from './redux/navSlice';
+import { setOpen,setNav1,setNav2,setNav3,setNav4,setNav5,setNav6 } from './redux/navSlice';
 import { logout } from "./redux/loginSlice";
+import logoimg from '../images/logo.png'
 export default function Navbar() {
 
-   
+    
 
     const open = useSelector((state) => state.nav.open)
-    const patient =useSelector((state)=>state.nav.patient)
-    const scheduling =useSelector((state)=>state.nav.scheduling)
-    const imaging =useSelector((state)=>state.nav.imaging)
-    const medication =useSelector((state)=>state.nav.medication)
+    const nav2 =useSelector((state)=>state.nav.nav2)
+    const nav3 =useSelector((state)=>state.nav.nav3)
+    const nav4 =useSelector((state)=>state.nav.nav4)
+    const nav5 =useSelector((state)=>state.nav.nav5)
     
 
     const dispatch = useDispatch()
@@ -33,8 +34,8 @@ export default function Navbar() {
 
                     
                 <div className="flex items-center">
-                    <i className={`fa-solid fa-hospital fa-xl text-gray-400 cursor-pointer duration-500 px-2 ${open && "rotate-[360deg]"
-                        }`}></i>
+                    <img src={logoimg} alt="" className={`text-gray-400 cursor-pointer duration-500 px-2 ${open && "rotate-[360deg]"
+                        }`} width="65px"></img>
 <Link to="/">
                     <h1
                         className={`text-gray-400 origin-left font-medium text-xl duration-200 ${!open && "scale-0"
@@ -63,58 +64,58 @@ export default function Navbar() {
                     </form>
 
                     <li
-                        className={`flex  rounded-md p-2 px-3 py-3 cursor-pointer hover:bg-gray-700 hover:text-white text-gray-400 text-sm items-center gap-2 px-3`} onClick={() => dispatch(setInventory())}>
-                        <i className={'fa-solid fa-box '}></i>
+                        className={`flex  rounded-md p-2 px-3 py-3 cursor-pointer hover:bg-gray-700 hover:text-white text-gray-400 text-sm items-center gap-2 px-3`} onClick={() => dispatch(setNav1())}>
+                        <i class='bx bxs-dashboard bx-sm'></i>
                         <span className={`${!open && "hidden"} origin-left duration-200`}>
                             Dashboard
                         </span>
                     </li>
                     <li
-                        className={`flex  rounded-md p-2 px-3 py-3 cursor-pointer hover:bg-gray-700 hover:text-white text-gray-400 text-sm items-center gap-2 px-3`} onClick={() => dispatch(setPatient())}>
+                        className={`flex  rounded-md p-2 px-3 py-3 cursor-pointer hover:bg-gray-700 hover:text-white text-gray-400 text-sm items-center gap-2 px-3`} onClick={() => dispatch(setNav2())}>
                         <i className="fa-solid fa-users "></i>
 
                         <span className={`${!open && "hidden"} origin-left duration-200`}>
                             Management System
                         </span>
                     </li>
-                    <ul className={`${patient ? "show" : "hidden"} m-1 origin-down duration-500`}>
-                        <Link to="patientlisting">
+                    <ul className={`${nav2 ? "show" : "hidden"} m-1 origin-down duration-500`}>
+                        <Link to="nav2listing">
                             <li
                                 className={`flex  rounded-md p-2 px-3 cursor-pointer hover:bg-gray-700 hover:text-white text-gray-400 text-sm items-center gap-2 px-3`}>
                                 <i className="fa-solid fa-caret-right fa-sm"></i>
                                 <span className={`${!open && "hidden"} origin-left duration-200`}>
-                                    Patient Listing
+                                    Nav2 Listing
                                 </span>
                             </li>
                         </Link>
-                        <Link to="patientadmitted">
+                        <Link to="nav2admitted">
                             <li
                                 className={`flex  rounded-md p-2 px-3 cursor-pointer hover:bg-gray-700 hover:text-white text-gray-400 text-sm items-center gap-2 px-3`}>
                                 <i className="fa-solid fa-caret-right fa-sm"></i>
                                 <span className={`${!open && "hidden"} origin-left duration-200`}>
-                                    Admitted Patients
+                                    Admitted Nav2s
                                 </span>
                             </li>
                         </Link>
-                        <Link to="outpatient">
+                        <Link to="outnav2">
                             <li
                                 className={`flex  rounded-md p-2 px-3 cursor-pointer hover:bg-gray-700 hover:text-white text-gray-400 text-sm items-center gap-2 px-3`}>
                                 <i className="fa-solid fa-caret-right fa-sm"></i>
                                 <span className={`${!open && "hidden"} origin-left duration-200`}>
-                                    Outpatient
+                                    Outnav2
                                 </span>
                             </li>
                         </Link>
-                        <Link to="newpatient">
+                        <Link to="newnav2">
                             <li
                                 className={`flex  rounded-md p-2 px-3 cursor-pointer hover:bg-gray-700 hover:text-white text-gray-400 text-sm items-center gap-2 px-3`}>
                                 <i className="fa-solid fa-caret-right fa-sm"></i>
                                 <span className={`${!open && "hidden"} origin-left duration-200`}>
-                                    New Patient
+                                    New Nav2
                                 </span>
                             </li>
                         </Link>
-                        <Link to="patientreport">
+                        <Link to="nav2report">
                             <li
                                 className={`flex  rounded-md p-2 px-3 cursor-pointer hover:bg-gray-700 hover:text-white text-gray-400 text-sm items-center gap-2 px-3`}>
                                 <i className="fa-solid fa-caret-right fa-sm"></i>
@@ -125,14 +126,14 @@ export default function Navbar() {
                         </Link>
                     </ul>
                     <li
-                        className={`flex  rounded-md p-2 px-3 py-3 cursor-pointer hover:bg-gray-700 hover:text-white text-gray-400 text-sm items-center gap-2 px-3`} onClick={() => dispatch(setScheduling())}>
+                        className={`flex  rounded-md p-2 px-3 py-3 cursor-pointer hover:bg-gray-700 hover:text-white text-gray-400 text-sm items-center gap-2 px-3`} onClick={() => dispatch(setNav3())}>
                         <i className="fa-solid fa-calendar-days"></i>
 
                         <span className={`${!open && "hidden"} origin-left duration-200`}>
                             Finance System
                         </span>
                     </li>
-                    <ul className={`${scheduling ? "show" : "hidden"} m-1 `}>
+                    <ul className={`${nav3 ? "show" : "hidden"} m-1 `}>
                         <li
                             className={`flex  rounded-md p-2 px-3 cursor-pointer hover:bg-gray-700 hover:text-white text-gray-400 text-sm items-center gap-2 px-3`}>
                             <i className="fa-solid fa-caret-right fa-sm"></i>
@@ -184,13 +185,13 @@ export default function Navbar() {
                         </li>
                     </ul>
                     <li
-                        className={`flex  rounded-md p-2 px-3 py-3 cursor-pointer hover:bg-gray-700 hover:text-white text-gray-400 text-sm items-center gap-2 px-3`} onClick={() => dispatch(setImaging())}>
+                        className={`flex  rounded-md p-2 px-3 py-3 cursor-pointer hover:bg-gray-700 hover:text-white text-gray-400 text-sm items-center gap-2 px-3`} onClick={() => dispatch(setNav4())}>
                         <i className="fa-solid fa-camera"></i>
                         <span className={`${!open && "hidden"} origin-left duration-200`}>
                             Projects
                         </span>
                     </li>
-                    <ul className={`${imaging ? "show" : "hidden"} m-1 `}>
+                    <ul className={`${nav4 ? "show" : "hidden"} m-1 `}>
                         <li
                             className={`flex  rounded-md p-2 px-3 cursor-pointer hover:bg-gray-700 hover:text-white text-gray-400 text-sm items-center gap-2 px-3`}>
                             <i className="fa-solid fa-caret-right fa-sm"></i>
@@ -214,14 +215,14 @@ export default function Navbar() {
                         </li>
                     </ul>
                     <li
-                        className={`flex  rounded-md p-2 px-3 py-3 cursor-pointer hover:bg-gray-700 hover:text-white text-gray-400 text-sm items-center gap-2 px-3`} onClick={() => dispatch(setMedication())}>
+                        className={`flex  rounded-md p-2 px-3 py-3 cursor-pointer hover:bg-gray-700 hover:text-white text-gray-400 text-sm items-center gap-2 px-3`} onClick={() => dispatch(setNav5())}>
                         <i className="fa-solid fa-notes-medical"></i>
 
                         <span className={`${!open && "hidden"} origin-left duration-200`}>
                             Reports
                         </span>
                     </li>
-                    <ul className={`${medication ? "show" : "hidden"} m-1 `}>
+                    <ul className={`${nav5 ? "show" : "hidden"} m-1 `}>
                         <li
                             className={`flex  rounded-md p-2 px-3 cursor-pointer hover:bg-gray-700 hover:text-white text-gray-400 text-sm items-center gap-2 px-3`}>
                             <i className="fa-solid fa-caret-right fa-sm"></i>
@@ -254,13 +255,13 @@ export default function Navbar() {
                             className={`flex  rounded-md p-2 px-3 cursor-pointer hover:bg-gray-700 hover:text-white text-gray-400 text-sm items-center gap-2 px-3`}>
                             <i className="fa-solid fa-caret-right fa-sm"></i>
                             <span className={`${!open && "hidden"} origin-left duration-200`}>
-                                Return Medication
+                                Return Nav5
                             </span>
                         </li>
                     </ul>
 
                     <li
-                        className={`flex  rounded-md p-2 px-3 py-3 cursor-pointer hover:bg-gray-700 hover:text-white text-gray-400 text-sm items-center gap-2 px-3`} onClick={() => dispatch(setAdmin())}>
+                        className={`flex  rounded-md p-2 px-3 py-3 cursor-pointer hover:bg-gray-700 hover:text-white text-gray-400 text-sm items-center gap-2 px-3`} onClick={() => dispatch(setNav6())}>
                         <i className="fa-solid fa-user"></i>
 
                         <span className={`${!open && "hidden"} origin-left duration-200`}>

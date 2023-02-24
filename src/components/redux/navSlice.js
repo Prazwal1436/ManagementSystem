@@ -2,15 +2,11 @@ import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
   open: false,
-  inventory: false,
-  patient:false,
-  scheduling:false,
-  imaging:false,
-  medication:false,
-  labs:false,
-  billing:false,
-  incident:false,
-  admin:false,
+  nav2:false,
+  nav3:false,
+  nav4:false,
+  nav5:false,
+  nav6:false,
 }
 
 export const navSlice = createSlice({
@@ -19,128 +15,88 @@ export const navSlice = createSlice({
   reducers: {
     setOpen: (state) => {
         state.open =  !(state.open)
-        state.inventory= false
-        state.patient=false
-        state.scheduling=false
-        state.imaging=false
-        state.medication=false
-        state.labs=false
-        state.billing=false
-        state.incident=false
-        state.admin=false
+        
+        state.nav2=false
+        state.nav3=false
+        state.nav4=false
+        state.nav5=false
+        state.nav6=false
+        
+        
+        
       },
-      setInventory:(state)=>{
-        state.inventory = !(state.inventory)
+      setNav1:(state)=>{
         state.open = true
-        state.patient=false
-        state.scheduling=false
-        state.imaging=false
-        state.medication=false
-        state.labs=false
-        state.billing=false
-        state.incident=false
-        state.admin=false
+        state.nav2=false
+        state.nav3=false
+        state.nav4=false
+        state.nav5=false
+        state.nav6=false
+        
+        
+        
       },
-      setPatient:(state)=>{
-        state.inventory = false
+      setNav2:(state)=>{
+        
         state.open = true
-        state.patient=(!state.patient)
-        state.scheduling=false
-        state.imaging=false
-        state.medication=false
-        state.labs=false
-        state.billing=false
-        state.incident=false
-        state.admin=false
+        state.nav2=(!state.nav2)
+        state.nav3=false
+        state.nav4=false
+        state.nav5=false
+        state.nav6=false
+        
+        
+        
       },
-      setScheduling:(state)=>{
-        state.inventory = false
+      setNav3:(state)=>{
+        
         state.open = true
-        state.patient=false
-        state.scheduling=(!state.scheduling)
-        state.imaging=false
-        state.medication=false
-        state.labs=false
-        state.billing=false
-        state.incident=false
-        state.admin=false
+        state.nav2=false
+        state.nav3=(!state.nav3)
+        state.nav4=false
+        state.nav5=false
+        state.nav6=false
+        
+        
+        
       },
-      setImaging:(state)=>{
-        state.inventory = false
+      setNav4:(state)=>{
+        
         state.open = true
-        state.patient=false
-        state.scheduling=false
-        state.imaging=(!state.imaging)
-        state.medication=false
-        state.labs=false
-        state.billing=false
-        state.incident=false
-        state.admin=false
+        state.nav2=false
+        state.nav3=false
+        state.nav4=(!state.nav4)
+        state.nav5=false
+        state.nav6=false
+        
+        
+        
       },
-      setMedication:(state)=>{
-        state.inventory = false
+      setNav5:(state)=>{
+        
         state.open = true
-        state.patient=false
-        state.scheduling=false
-        state.imaging=false
-        state.medication=(!state.medication)
-        state.labs=false
-        state.billing=false
-        state.incident=false
-        state.admin=false
+        state.nav2=false
+        state.nav3=false
+        state.nav4=false
+        state.nav5=(!state.nav5)
+        state.nav6=false
+        
+        
+        
       },
-      setLabs:(state)=>{
-        state.inventory = false
+      setNav6:(state)=>{
+        
         state.open = true
-        state.patient=false
-        state.scheduling=false
-        state.imaging=false
-        state.medication=false
-        state.labs=(!state.labs)
-        state.billing=false
-        state.incident=false
-        state.admin=false
-      },
-      setBilling:(state)=>{
-        state.inventory = false
-        state.open = true
-        state.patient=false
-        state.scheduling=false
-        state.imaging=false
-        state.medication=false
-        state.labs=false
-        state.billing=(!state.billing)
-        state.incident=false
-        state.admin=false
-      },
-      setIncident:(state)=>{
-        state.inventory = false
-        state.open = true
-        state.patient=false
-        state.scheduling=false
-        state.imaging=false
-        state.medication=false
-        state.labs=false
-        state.billing=false
-        state.incident=(!state.incident)
-        state.admin=false
-      },
-      setAdmin:(state)=>{
-        state.inventory = false
-        state.open = true
-        state.patient=false
-        state.scheduling=false
-        state.imaging=false
-        state.medication=false
-        state.labs=false
-        state.billing=false
-        state.incident=false
-        state.admin=(!state.admin)
+        state.nav2=false
+        state.nav3=false
+        state.nav4=false
+        state.nav5=false
+        state.nav6=false
       },
   },
 })
 
 // Action creators are generated for each case reducer function
-export const {setOpen,setInventory,setPatient,setScheduling,setImaging,setMedication,setLabs,setBilling,setIncident,setAdmin} = navSlice.actions
+export const {setOpen,setNav1,setNav2,setNav3,setNav4,setNav5,setNav6} = navSlice.actions
 
 export default navSlice.reducer

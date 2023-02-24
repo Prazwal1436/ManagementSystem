@@ -1,142 +1,42 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Welcome() {
   return (
-    <div className='bg-gradient-to-l from-gray-500 h-screen'>
-      Welcome
+    <div>
+        <nav className="w-full rounded-md py-2 px-8">
+  <ol className="list-reset flex">
+    <li>
+      <Link to="/" className="text-gray transition duration-150 ease-in-out hover:text-gray-600 focus:text-gray-600 active:text-gray-700 dark:text-gray-400 dark:hover:text-gray-500 dark:focus:text-gray-500 dark:active:text-gray-600">
+        Home
+        </Link>
+    </li>
+    <li>
+      <span className="mx-2 text-neutral-500 dark:text-neutral-400">/</span>
+    </li>
+  </ol>
+</nav>
+<div className='bg-gray-100 h-screen p-4'>
+<div class="grid grid-cols-1 grid-cols-5 gap-4">
+  
+<div class="flex justify-center">
+  <div
+    class="block max-w-sm rounded-lg bg-white p-6 shadow-lg dark:bg-neutral-700">
+    <h5
+      class="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">
+      Room Balance
+    </h5>
+   <div className='flex'>
+   <i class='bx bxs-badge-dollar'></i>
 
-      <div class="flex justify-center">
-  <div>
-    <div class="dropdown ">
-      <button
-        class="
-          dropdown-toggle
-          px-6
-          py-2.5
-          bg-blue-600
-          text-white
-          font-medium
-          text-xs
-          leading-tight
-          uppercase
-          rounded
-          shadow-md
-          hover:bg-blue-700 hover:shadow-lg
-          focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0
-          active:bg-blue-800 active:shadow-lg active:text-white
-          transition
-          duration-150
-          ease-in-out
-          flex
-          items-center
-          whitespace-nowrap
-        "
-        type="button"
-        id="dropdownMenuButton1"
-        data-bs-toggle="dropdown"
-        aria-expanded="false"
-      >
-        Dropdown button
-        <svg
-          aria-hidden="true"
-          focusable="false"
-          data-prefix="fas"
-          data-icon="caret-down"
-          class="w-2 ml-2"
-          role="img"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 320 512"
-        >
-          <path
-            fill="currentColor"
-            d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"
-          ></path>
-        </svg>
-      </button>
-      <ul
-        class="
-          dropdown-menu
-          min-w-max
-          absolute
-          hidden
-          bg-white
-          text-base
-          z-50
-          float-left
-          py-2
-          list-none
-          text-left
-          rounded-lg
-          shadow-lg
-          mt-1
-          hidden
-          m-0
-          bg-clip-padding
-          border-none
-        "
-        aria-labelledby="dropdownMenuButton1"
-      >
-        <li>
-          <a
-            class="
-              dropdown-item
-              text-sm
-              py-2
-              px-4
-              font-normal
-              block
-              w-full
-              whitespace-nowrap
-              bg-transparent
-              text-gray-700
-              hover:bg-gray-100
-            "
-            href="#"
-            >Action</a
-          >
-        </li>
-        <li>
-          <a
-            class="
-              dropdown-item
-              text-sm
-              py-2
-              px-4
-              font-normal
-              block
-              w-full
-              whitespace-nowrap
-              bg-transparent
-              text-gray-700
-              hover:bg-gray-100
-            "
-            href="#"
-            >Another action</a
-          >
-        </li>
-        <li>
-          <a
-            class="
-              dropdown-item
-              text-sm
-              py-2
-              px-4
-              font-normal
-              block
-              w-full
-              whitespace-nowrap
-              bg-transparent
-              text-gray-700
-              hover:bg-gray-100
-            "
-            href="#"
-            >Something else here</a
-          >
-        </li>
-      </ul>
-    </div>
+   </div>
   </div>
 </div>
+
+</div>
+
+</div>
+
     </div>
   )
 }
